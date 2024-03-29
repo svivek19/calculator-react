@@ -1,37 +1,89 @@
-.calculator{
-    width: 200px;
-    margin: 0 auto;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(24, 16, 6);
+  overflow: hidden;
 }
 
-input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    outline: none;
-    border: 1px solid #1d1d1d;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.buttons{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 5px;
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
 button {
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: #f0f0f0;
-  }
-  
-  button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  button:active {
-    background-color: #d0d0d0;
-  }
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(92, 122, 91, 0.8);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
 
+button:hover {
+  background-color: rgba(69, 160, 73, 0.8);
+}
+
+button:active {
+  background-color: rgba(63, 145, 66, 0.8);
+}
+
+.clear{
+  background: red;
+}
+
+.clear:hover{
+  background-color: rgb(255, 64, 64);
+}
+
+.equal-div{
+  margin: 10px 0 0;
+}
+
+.equal-div button{
+  background: rgb(49, 100, 252);
+  width: 100%;
+  font-size: 20px;
+}
+
+.equal-div button:hover{
+  background-color: rgb(37, 67, 156);
+  transition: all 0.5s;
+}
+
+.opt{
+  background-color: greenyellow;
+  color: black;
+  font-size: 20px;
+}
+.opt:hover{
+  background-color: rgb(122, 201, 5);
+}
